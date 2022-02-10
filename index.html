@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Fox</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- Start Navbar -->
+    <nav>
+        <div class="container fl-nav">
+            <div id="show-menu">
+                <img src="/img/SVG/atari-icon.svg" alt="">
+            </div>
+            <div class="logo">
+                <img src="img/logo.svg" alt="JS FOX">
+            </div>
+            <div class="icon-menu">
+                <img src="img/SVG/menu-icon.svg" alt="">
+            </div>
+            <div class="nav-menu">
+                <div class="search-bar">
+                    <input type="search" placeholder="search"><img src="/img/search.svg" alt="">
+                </div>
+                <div class="links">
+                    <ul>
+                        <li>html</li>
+                        <li>css</li>
+                        <li class="active">JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start Side Menu + Content -->
+    <div class="content">
+        <div class="container">
+            <aside>
+                <div class="menu-title">
+                    <h3>JavaScript Bootcamp Content</h3>
+                    <!-- close menu
+                    <div id="cl-menu">
+                        <img src="/img/SVG/close.svg" alt="">
+                    </div> -->
+                    
+                </div>
+                
+                <ul class="side-menu">
+                    <li  id="sub">
+                        <span>
+                            introduction
+                            <img src="img/arrow.svg" alt=""></span>
+                        <ul id="aside-links">
+                            <li class="introduction-1">What Is JavaScript?</li>
+                            <li class="introduction-2">Setting Up Environment And Tools</li>
+                            <!-- <li>Where To Put The Code?</li>
+                            <li>Comments And Bad Practices</li>
+                            <li>Console Methods And Styling</li>
+                            <li>What Is WebAPI</li>
+                            <li>What Is ECMAScript?</li> -->
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                </ul>
+            </aside>
+            <div class="blog-content">
+                <div class="box-content header">
+                    <div class="header-info">
+                        <h1>تلخيصات الدورات التعليمية الخاصة بموقع اكاديمية الزيرو</h1>
+                        <p>مرحبا بك في موقع تلخيصات الدورات التعليمية. يعتبر الموقع مرجعا لبعض دورات اكاديمية الزيرو, حيت تستطيع الرجوع للملخصات للمراجعة.</p>
+                        <div class="h-btn">
+                            <button><a href="https://elzero.org/" target="_blank">موقع اكاديمية الزيرو</a></button>
+                            <button><a href="https://www.youtube.com/channel/UCSNkfKl4cU-55Nm-ovsvOHQ" target="_blank">قناة اكاديمية الزيرو</a></button>
+                        </div>
+                    </div>
+                    <div class="header-img">
+                        <img src="/img/SVG/man_1.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="box-content introduction-1">
+                    <h3>ما هي لغة جافا سكريبت</h3>
+                    <p>لغة الجافا سكريبت هي لغة برمجة  <span>Programming Language</span> او <span>Scripting Language</span> تعمل على جانب ال <span>Client Side</span> او <span>Server Side</span>. تُستخدم الجافا سكريبت لجعل صفحات الويب تفاعلية.</p>
+                    <h3>ما هي الاشياء التي يمكن ان نفعلها بالجافا سكريبت؟</h3>
+                    <ul>
+                        <li>تحديث المحتوى ديناميكيا</li>
+                        <li>التلاعب بعناصر ال <span>HTML</span> و <span>CSS</span></li>
+                        <li>تحريك المحتوى والصور مثال: <span>slider</span></li>
+                        <li>التلاعب والتحقق من صحة البيانات</li>
+                        <li>التحكم في الوسائط <span>Audio</span>, <span>Video</span></li>
+                        <li>إنشاء الالعاب على المتصفح</li>
+                        <li>إنشاء تطبيقات الهواتف وسطح المكتب</li>
+                    </ul>
+                </div>
+
+                <div class="box-content introduction-2">
+                    <h3>تجهيز الأدوات</h3>
+                    <p>اولا قم بتحميل محرر الاكواد <span>visual studio code</span>. إذا كنت تتوفر على محرر الاكواد مسبقا قم بالتأكد من ان لديك اخر اصدار عن طريق الضغط على <span>help</span> ثم <span>check for upadtes</span></p>
+                    <div class="c-img">
+                        <img src="/img/check_for_updates.png" alt="">
+                    </div>
+                    <h3>بعض الإضافات المهمة داخل محرر الاكواد visual studio code</h3>
+                    <p>قم بالضغط على ايقونة <span>extensions</span> لتتبيت الاضافات</p>
+                    <div class="c-img">
+                        <img src="/img/extensions.jpg" alt="">
+                    </div>
+
+                    <p>بعض الاضافات التي سوف تساعدك في مشاريعك البرمجية</p>
+                    <!-- 1 -->
+                    <div class="list-group">
+                        <div class="lg-img">
+                            <img src="/img/Bracket_Pair_Colorizer.jpg" alt="">
+                        </div>
+                        <div class="lg-info">
+                            <h4>Bracket Pair Colorizer 2</h4>
+                            <p>هذه الإضافة تقوم بتلوين الاقواس بألوان مختلفة عند كتابة كود متداخل حيت تمكننا من التمييز بين بداية القوس ونهايته.</p>
+                        </div>
+                        <p></p>
+                    </div>
+                    <!-- 2 -->
+                    <div class="list-group">
+                        <div class="lg-img">
+                            <img src="/img/editorConfig.jpg" alt="">
+                        </div>
+                        <div class="lg-info">
+                            <h4>EditorConfig</h4>
+                            <p>هذه الإضافة مفيدة عند العمل مع فريق حيث تسمح لك بانشاء ملف config للاعدادت الخاصة بك على محرر الأكواد. عندما يقوم شخص اخر في الفريق بتنزيل الملف فإنه يحصل على نفس الإعدادات.</p>
+                        </div>
+                        <p></p>
+                    </div>
+                    <!-- 3 -->
+                    <div class="list-group">
+                        <div class="lg-img">
+                            <img src="/img/es_lint.jpg" alt="">
+                        </div>
+                        <div class="lg-info">
+                            <h4>ESLint</h4>
+                            <p>هذه الإضافة تساعدك في كتابة كود سليم متوافق مع المعايير العالمية لكتابة الكود.</p>
+                        </div>
+                        <p></p>
+                    </div>
+                    <!-- 4 -->
+                    <div class="list-group">
+                        <div class="lg-img">
+                            <img src="/img/indent-rainbow.jpg" alt="">
+                        </div>
+                        <div class="lg-info">
+                            <h4>indent-rainbow</h4>
+                            <p>هذه الإضافة تقوم بتلوين المسافات البادئة أمام الكود الخاص بك بالتناوب بأربعة ألوان مختلفة في كل سطر.</p>
+                        </div>
+                        <p></p>
+                    </div>
+                    <!-- 5 -->
+                    <div class="list-group">
+                        <div class="lg-img">
+                            <img src="/img/live-server.jpg" alt="">
+                        </div>
+                        <div class="lg-info">
+                            <h4>Live Server</h4>
+                            <p>تمكنك هذه الإضافة من انشاء خادم محلي local Server لتجربة البرمجيات الخاصة بك. وتتوفر ايضا على خاصية live reload التي تقوم باعادة تحميل الصفحة تلقائيا عند حفظ المشروع. </p>
+                        </div>
+                        <p></p>
+                    </div>
+                    <!-- 6 -->
+                    <div class="list-group">
+                        <div class="lg-img">
+                            <img src="/img/Material-Icon.jpg" alt="">
+                        </div>
+                        <div class="lg-info">
+                            <h4>Material Icon Theme</h4>
+                            <p>هذه الإضافة تقوم بإضافة أيقونات لمحرر الأكواد حيث تضيف شكلا جماليا للمحرر</p>
+                        </div>
+                        <p></p>
+                    </div>
+                    <!-- 7 -->
+                    <div class="list-group">
+                        <div class="lg-img">
+                            <img src="/img/Path-Intellisense.jpg" alt="">
+                        </div>
+                        <div class="lg-info">
+                            <h4>Path Intellisense</h4>
+                            <p>هذه الاضافة تقوم بإكمال أسماء الملفات تلقائيا عند كتابة مسار معين, وتسمح لنا أيضا بإستكشاف الملفات والإختيار منها.</p>
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--  -->
+                    <div class="list-group">
+                        <div class="lg-img">
+                            <img src="/img/Prettier.jpg" alt="">
+                        </div>
+                        <div class="lg-info">
+                            <h4>Prettier - Code formatter</h4>
+                            <p>هذه الإضافة تقوم بتنسيق الكود الخاص بك</p>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/costum.js"></script>
+</body>
+</html>

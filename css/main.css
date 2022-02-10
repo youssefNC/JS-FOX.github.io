@@ -1,0 +1,630 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  -o-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Droid";
+  src: url(../fonts/Droid-Arabic-Kufi.ttf);
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.75);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Start Navbar */
+nav {
+  height: 110px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container.fl-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav .logo,
+nav .icon-menu {
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+
+nav .logo {
+  width: calc(100% - 100px);
+  justify-content: center;
+}
+nav .icon-menu {
+  width: 50px;
+  height: 50px;
+  justify-content: flex-end;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+nav .icon-menu:hover {
+  opacity: 1;
+}
+
+nav .logo img {
+  height: 40%;
+}
+
+nav .icon-menu img {
+  width: 100%;
+}
+
+.nav-menu {
+  position: fixed;
+  background: rgb(14 14 14 / 99%);
+  top: 110px;
+  width: 100%;
+  height: calc(100vh - 110px);
+  left: 0px;
+  padding: 15px;
+  display: none;
+  z-index: 999;
+  animation: slide-down 0.3s ease-in;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.search-bar {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  background: rgb(255 255 255 / 10%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  text-transform: capitalize;
+  outline: none;
+}
+
+.search-bar img {
+  height: 25px;
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 18px);
+  opacity: 0.8;
+}
+
+.links ul li {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(250, 250, 250, 0.1);
+  margin-top: 10px;
+  border-radius: 10px;
+  color: rgba(250, 250, 250, 0.4);
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+/* End Navbar */
+
+/* show Menu Button */
+
+#show-menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+#show-menu img {
+  width: 35px;
+}
+
+#show-menu:hover {
+  opacity: 1;
+}
+
+/* Start Aside */
+/* Info + Aside */
+
+aside {
+  width: 100%;
+  background: rgb(14 14 14 / 99%);
+  border-top: 1px solid rgba(250, 250, 250, 0.1);
+  position: fixed;
+  height: calc(100vh - 110px);
+  overflow-y: auto;
+  z-index: 1;
+  top: 110;
+  left: 0;
+  display: none;
+  animation: slideLeft 0.3s ease-in-out;
+}
+
+@keyframes slideLeft {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+aside .menu-title {
+  width: calc(100% - 40px);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside .menu-title h3 {
+  width: calc(100% - 35px);
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+aside .menu-title #cl-menu {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(250, 250, 250, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside .menu-title #cl-menu img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+/* Side Menu Scrollbar  */
+
+aside::-webkit-scrollbar {
+  width: 8px;
+}
+aside::-webkit-scrollbar-track {
+  background-color: #121212;
+}
+aside::-webkit-scrollbar-thumb {
+  background-color: rgba(250, 250, 250, 0.1);
+}
+
+aside ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+  text-transform: capitalize;
+}
+
+aside ul li span {
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+aside ul li .active::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  background-color: #ffb620;
+  left: 0;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+aside ul li span img {
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+}
+
+#aside-links {
+  width: 100%;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: none;
+  animation: fade 0.3s ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+ul#aside-links::before {
+  content: "";
+  width: 2px;
+  height: calc(100% - 26px);
+  background: rgba(250, 250, 250, 0.1);
+  position: absolute;
+  left: 20px;
+}
+
+#aside-links li {
+  padding: 8px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+}
+
+#aside-links li:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 20px;
+  margin-bottom: 15px;
+  border: 2px solid rgba(250, 250, 250, 0.1);
+  border-bottom-left-radius: 8px;
+  border-color: transparent transparent rgba(250, 250, 250, 0.1)
+    rgba(250, 250, 250, 0.1);
+}
+
+#aside-links li:hover {
+  padding-left: 10px;
+  color: rgba(250, 250, 250, 0.4);
+}
+
+#aside-links li.activeted {
+  padding-left: 10px;
+  color: #ffb620;
+}
+
+/* End Aside */
+
+/* content */
+
+.blog-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+  font-family: "Droid", "Poppins", sans-serif;
+  color: #eee;
+  position: relative;
+}
+
+.box-content {
+  width: 100%;
+  min-height: calc(100vh - 170px);
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  position: absolute;
+  display: none;
+  animation: popup 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 170px);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.header .header-info {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header .header-info h1 {
+  font-size: 30px;
+  line-height: 1.7;
+}
+
+.header .header-info p {
+  font-size: 16px;
+  color: rgba(250, 250, 250, 0.9);
+}
+
+.header .header-info .h-btn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.header .header-info .h-btn button {
+  width: calc(50% - 10px);
+  background-color: #ffb620;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header .header-info .h-btn button:last-child {
+  background-color: rgba(250, 250, 250, 0.1);
+}
+
+.header .header-info .h-btn button a {
+  color: #000000;
+  font-size: 17px;
+  text-decoration: none;
+  font-family: "Droid";
+}
+
+.header .header-info .h-btn button:last-child a {
+  color: white;
+}
+
+.header .header-info .h-btn button:hover {
+  transform: scale(1.03);
+}
+
+.header .header-img {
+  display: none;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.box-content h3 {
+  color: #ffb620;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.box-content ul {
+  color: #eee;
+}
+
+.box-content p span,
+.box-content ul li span {
+  background-color: rgba(250, 250, 250, 0.1);
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+/* content img */
+
+.c-img {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-img img {
+  max-width: 100%;
+}
+
+/* List Group */
+.list-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgba(250, 250, 250, 0.1);
+}
+
+.lg-img {
+  width: 64px;
+  height: 64px;
+}
+
+.lg-img img {
+  width: 64px;
+  height: 64px;
+}
+
+.lg-info {
+  width: calc(100% - 84px);
+}
+
+.lg-info h4 {
+  font-size: 18px;
+}
+
+.lg-info p {
+  color: rgba(250, 250, 250, 0.6);
+}
+
+/* My Framework */
+
+ul {
+  list-style: none;
+}
+
+/*********************
+Media  
+**********************/
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+
+  nav .logo {
+    width: calc(20% - 50px);
+  }
+
+  nav .logo img {
+    height: 35%;
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    position: relative;
+    background: transparent;
+    top: 0;
+    width: 75%;
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-bar {
+    border-bottom: none;
+    padding-bottom: 0px;
+    position: relative;
+    width: 40%;
+  }
+
+  .search-bar img {
+    top: calc(50% - 12.5px);
+  }
+
+  .links {
+    width: 60%;
+  }
+
+  .links ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .links ul li {
+    width: fit-content;
+    background: transparent;
+    margin-top: 0px;
+    margin-left: 30px;
+    height: 110px;
+    cursor: pointer;
+  }
+
+  .links ul li:hover {
+    color: rgba(250, 250, 250, 0.8);
+  }
+
+  .links ul li.active {
+    color: #ffb620;
+  }
+  .links ul li.active::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background: #ffb620;
+    top: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  /* side menu */
+
+  aside {
+    width: 30%;
+    background: rgba(0, 0, 0, 0.4);
+    display: block;
+  }
+  /* content */
+  .box-content {
+    width: calc(70%);
+    right: 0;
+  }
+
+  /* header */
+
+  .header {
+    background: transparent;
+  }
+
+  .header .header-info {
+    width: 50%;
+    height: 75%;
+  }
+
+  .header .header-img {
+    display: block;
+    width: 45%;
+    height: 100%;
+  }
+
+  .header .header-img img {
+    width: 100%;
+    height: 100%;
+  }
+}
