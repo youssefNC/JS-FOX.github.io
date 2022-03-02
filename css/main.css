@@ -432,10 +432,15 @@ ul#aside-links::before {
   color: #ffb620;
   margin-top: 30px;
   margin-bottom: 5px;
+  font-size: 22px;
 }
 
 .box-content ul {
   color: #eee;
+}
+
+.box-content p {
+  font-size: 18px;
 }
 
 .box-content p span,
@@ -445,6 +450,11 @@ ul#aside-links::before {
   padding-right: 4px;
   font-size: 15px;
   border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.box-content p span.yellow {
+  background: rgb(255 183 33 / 40%);
 }
 
 /* content img */
@@ -454,6 +464,7 @@ ul#aside-links::before {
   padding: 20px;
   border: 1px solid rgba(250, 250, 250, 0.1);
   margin-top: 15px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
